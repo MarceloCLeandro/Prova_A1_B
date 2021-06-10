@@ -7,7 +7,7 @@ package provab;
 
 /**
  *
- * @author cleber
+ * @author mcl_l
  */
 public class Gerente extends Trabalhador {
 
@@ -54,23 +54,23 @@ public class Gerente extends Trabalhador {
     double calcularBonificacao(float salario) {
         float valorBonificacao;
         bonificacao = (float) (15.0 / 100);
-        valorBonificacao = salario + (salario * bonificacao);
+        valorBonificacao = salario * bonificacao;
         return valorBonificacao;
     }
 
     double calcularAumento(float salario, String regiao) {
         float aumento = 0.0f;
         if (regiao.equalsIgnoreCase("Zona Sul")) {
-            aumento = salario + (salario * 0.10f);// calcular 10%
+            aumento = salario * 0.10f;// calcular 10%
         } else {
             if (regiao.equalsIgnoreCase("Zona Norte")) {
-                aumento = salario + (salario * 0.1005f);// calcular 10,05%
+                aumento = salario * 0.1005f;// calcular 10,05%
             } else {
                 if (regiao.equalsIgnoreCase("Zona Leste")) {
-                    aumento = salario + (salario * 0.1085f);// calcular 10,85%
+                    aumento = salario * 0.1085f;// calcular 10,85%
                 } else {
                     if (regiao.equalsIgnoreCase("Zona Oeste")) {
-                        aumento = salario + (salario * 0.0996f);// calcular 9,96%
+                        aumento = salario * 0.0996f;// calcular 9,96%
                     }
                 }
             }
@@ -83,9 +83,9 @@ public class Gerente extends Trabalhador {
     double salarioMaiorQue(float salario) {
         float atualizado = 0;
         if (salario <= 4000) {
-            System.out.println("Este Gerente Recebe nemos de R$4.000,00. Seu Salario é " + salario);
+            System.out.println("Este Gerente Recebe nemos de R$4.000,00. Seu Salário é " + salario);
         } else {
-            System.out.println("Este Gerente recebe mais de R$4.000,00. Seu Salario é "+ salario );
+            System.out.println("Este Gerente recebe mais de R$4.000,00. Seu Salário é "+ salario );
         }
 
         return atualizado;

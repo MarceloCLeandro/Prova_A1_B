@@ -7,7 +7,7 @@ package provab;
 
 /**
  *
- * @author cleber
+ * @author mcl_l
  */
 public class Trabalhador {
 

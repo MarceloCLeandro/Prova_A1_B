@@ -7,7 +7,7 @@ package provab;
 
 /**
  *
- * @author cleber
+ * @author mcl_l
  */
 public class ProvaB {
 
@@ -26,9 +26,9 @@ public class ProvaB {
         System.out.println("O Gerente " + objGerente.getNome()
                 + " " + objGerente.getDepartamento()
                 + " da " + objGerente.getRegiao()
-                + " com o sálario de " + objGerente.getSalario()
+                + " com o salário de " + objGerente.getSalario()
                 + " teve um aumento de 10% pela sua região = " + objGerente.calcularAumento(17000, "Zona Sul")
-                + " mais uma bonificação unal de 15% = " + objGerente.calcularBonificacao(17000)
+                + " mais uma bonificação unal de 15% = " + objGerente.calcularBonificacao(17000) 
                 + objGerente.salarioMaiorQue(17000));
         System.out.println("_______________________\n");
 
@@ -41,7 +41,7 @@ public class ProvaB {
         System.out.println("O Gerente " + objGerente2.getNome()
                 + " " + objGerente2.getDepartamento()
                 + " da " + objGerente2.getRegiao()
-                + " com o sálario de " + objGerente2.getSalario()
+                + " com o salário de " + objGerente2.getSalario()
                 + " teve um aumento de 10,85% pela sua região = " + objGerente2.calcularAumento(5000, "Zona Leste")
                 + " mais uma bonificação unal de 15% = " + objGerente2.calcularBonificacao(5000)
                 + objGerente2.salarioMaiorQue(5000));
@@ -56,7 +56,7 @@ public class ProvaB {
         System.out.println("O Gerente " + objGerente3.getNome()
                 + " " + objGerente3.getDepartamento()
                 + " da " + objGerente3.getRegiao()
-                + " com o sálario de " + objGerente3.getSalario()
+                + " com o salário de " + objGerente3.getSalario()
                 + " teve um aumento de 9,96% pela sua região = " + objGerente3.calcularAumento(4000, "Zona Oeste")
                 + " mais uma bonificação unal de 15% = " + objGerente3.calcularBonificacao(4000)
                 + objGerente3.salarioMaiorQue(4000));
@@ -71,7 +71,7 @@ public class ProvaB {
         System.out.println("O Gerente " + objGerente4.getNome()
                 + " " + objGerente4.getDepartamento()
                 + " da " + objGerente4.getRegiao()
-                + " com o sálario de " + objGerente4.getSalario()
+                + " com o salário de " + objGerente4.getSalario()
                 + " teve um aumento de 10,05% pela sua região = " + objGerente4.calcularAumento(3000, "Zona Norte")
                 + " mais uma bonificação unal de 15% = " + objGerente4.calcularBonificacao(3000)
                 + objGerente4.salarioMaiorQue(3000));
