@@ -11,10 +11,10 @@ package provab;
  */
 public class Gerente extends Trabalhador {
 
-    private String departamento, regiao[];
+    private String departamento, regiao;
     private float bonificacao;
 
-    public Gerente(String departamento, String[] regiao, float bonificacao) {
+    public Gerente(String departamento, String regiao, float bonificacao) {
         this.departamento = departamento;
         this.regiao = regiao;
         this.bonificacao = bonificacao;
@@ -28,11 +28,11 @@ public class Gerente extends Trabalhador {
         this.departamento = departamento;
     }
 
-    public String[] getRegiao() {
+    public String getRegiao() {
         return regiao;
     }
 
-    public void setRegiao(String[] regiao) {
+    public void setRegiao(String regiao) {
         this.regiao = regiao;
     }
 
@@ -51,31 +51,43 @@ public class Gerente extends Trabalhador {
                 + ", Bonificação Anual de = " + bonificacao;
     }
 
-    double calcularBonificacao(float salario, float bonificacao) {
+    double calcularBonificacao(float salario) {
         float valorBonificacao;
         bonificacao = (float) (15.0 / 100);
         valorBonificacao = salario + (salario * bonificacao);
         return valorBonificacao;
     }
 
-    public void calcularAumento(float salario, String regiao) {
+    double calcularAumento(float salario, String regiao) {
         float aumento = 0.0f;
         if (regiao.equalsIgnoreCase("Zona Sul")) {
             aumento = salario + (salario * 0.10f);// calcular 10%
         } else {
-            if (regiao.equalsIgnoreCase("C")) {
+            if (regiao.equalsIgnoreCase("Zona Norte")) {
                 aumento = salario + (salario * 0.1005f);// calcular 10,05%
             } else {
-                if (regiao.equalsIgnoreCase("VB")) {
+                if (regiao.equalsIgnoreCase("Zona Leste")) {
                     aumento = salario + (salario * 0.1085f);// calcular 10,85%
                 } else {
-                    if (regiao.equalsIgnoreCase("Go")) {
+                    if (regiao.equalsIgnoreCase("Zona Oeste")) {
                         aumento = salario + (salario * 0.0996f);// calcular 9,96%
                     }
                 }
             }
 
         }
+        return aumento;
 
+    }
+
+    double salarioMaiorQue(float salario) {
+        float atualizado = 0;
+        if (salario <= 4000) {
+            System.out.println("Este Gerente Recebe nemos de R$4.000,00. Seu Salario é " + salario);
+        } else {
+            System.out.println("Este Gerente recebe mais de R$4.000,00. Seu Salario é "+ salario );
+        }
+
+        return atualizado;
     }
 }
